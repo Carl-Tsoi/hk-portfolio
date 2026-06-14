@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "持仓",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/history/history",
+      "style": {
+        "navigationBarTitleText": "流水账本"
+      }
+    },
+    {
+      "path": "pages/trade/trade",
+      "style": {
+        "navigationBarTitleText": "股票交易"
+      }
+    },
+    {
+      "path": "pages/dividend/dividend",
+      "style": {
+        "navigationBarTitleText": "录入分红"
+      }
+    },
+    {
+      "path": "pages/admin/admin",
+      "style": {
+        "navigationBarTitleText": "数据管理"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1e3c72",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "持仓",
+        "iconPath": "static/tab-portfolio.png",
+        "selectedIconPath": "static/tab-portfolio-active.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "流水",
+        "iconPath": "static/tab-history.png",
+        "selectedIconPath": "static/tab-history-active.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "港股持仓",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f8f9fa"
+  },
+  "uniStatistics": {
+    "enable": false
+  }
+}

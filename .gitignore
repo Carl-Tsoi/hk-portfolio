@@ -1,0 +1,11 @@
+node_modules/
+dist/
+logs/
+downloads/
+*.log
+.DS_Store
+.vite/
+.claude/
+public/hk_portfolio_db.db
+public/sql-wasm.wasm
+package-lock.json
