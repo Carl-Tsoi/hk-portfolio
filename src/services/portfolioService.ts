@@ -403,6 +403,10 @@ export async function syncStockListFromHKEX(source?: string | ArrayBuffer): Prom
     }
   });
 
+  // 立即持久化（跳过 debounce，确保刷新页面不丢数据）
+  const { flushAutoSave } = await import('@/utils/db');
+  flushAutoSave();
+
   logger.info(`syncStockListFromHKEX: ${stocks.length} stocks imported`);
   return stocks.length;
 }

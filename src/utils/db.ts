@@ -294,6 +294,12 @@ function debouncedAutoSave(): void {
   autoSaveTimer = setTimeout(() => { autoSave(); autoSaveTimer = null; }, 500);
 }
 
+/** 立即持久化（批量操作完成后调用，跳过 debounce） */
+export function flushAutoSave(): void {
+  if (autoSaveTimer) { clearTimeout(autoSaveTimer); autoSaveTimer = null; }
+  autoSave();
+}
+
 export async function selectSql(sql: string, params: any[] = []): Promise<any[]> {
   if (!dbInstance) throw new Error('[DB] Database not initialized');
 

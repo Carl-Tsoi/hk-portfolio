@@ -161,7 +161,8 @@ async function handleSync() {
 
     logger.info('Parsing and importing...');
     const count = await syncStockListFromHKEX(buffer);
-    await loadStatus();
+    lastUpdate.value = new Date().toLocaleString('zh-HK');
+    stockCount.value = count;
     logger.info(`Sync complete: ${count} stocks`);
   } catch (e: any) {
     logger.error('Sync failed', { error: String(e) });
